@@ -14,11 +14,14 @@ body {
   position: relative;
   background: #ffffff;
   border-radius: 10px;
+  width: 400px;
+  margin: 0 auto;
 }
 
 /* Show the album artwork, give it round corners */
 .song__artwork-container {
   height: 250px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -36,13 +39,16 @@ body {
   overflow: hidden;
   background: rgba(0,0,0,0.8);
   padding: 15px 0;
+  margin: 0 auto;
 }
 
 .song__time-start,
 .song__time-end {
   text-align: center;
   font-size: 12px;
+  width: 25%;
   color: #ffffff;
+  float:left;
 }
 
 .song__time-progress-container {
