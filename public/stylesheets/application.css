@@ -13,20 +13,13 @@ body {
 .player {
   position: relative;
   background: #ffffff;
-  width: 400px;
-  margin: 0 auto;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 20px 2px rgba(219,219,219,1);
-  -moz-box-shadow: 0px 0px 20px 2px rgba(219,219,219,1);
-  box-shadow: 0px 0px 20px 2px rgba(219,219,219,1);
 }
 
 /* Show the album artwork, give it round corners */
 .song__artwork-container {
   height: 250px;
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 /* Make sure the album cover fits inside the container */
@@ -47,10 +40,6 @@ body {
 
 .song__time-start,
 .song__time-end {
-  position: relative;
-  display: inline-block;
-  float: left;
-  width: 25%;
   text-align: center;
   font-size: 12px;
   color: #ffffff;
