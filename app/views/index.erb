@@ -1,3 +1,39 @@
 <div class="player">
-  The mp3 player should appear here
+  <div class="song__artwork-container">
+    <img src="images/cover.jpg" class="song__artwork">
+  </div>
+
+  <div class="song__time">
+    <div class="song__time-start">
+      0:00
+    </div>
+    <div class="song__time-progress-container">
+      <div class="song__progress-bar">
+        <div class="song__progress-indicator" style="width:0%;"></div>
+      </div>
+    </div>
+    <div class="song__time-end">
+      0:00
+    </div>
+  </div>
+
+  <div class="player-content">
+    <div class="song-title">
+      Buffalo Solider
+    </div>
+    <div class="album-title">
+      The best of Bob Marley &amp; the Wailers
+    </div>
+    <div class="album-artist">
+      Bob Marley
+    </div>
+  </div>
+
+  <div class="player-controls">
+    <a href="#"></a>
+  </div>
 </div>
+
+<% content_for :js do %>
+  <script src="/javascript/audio-player.js"></script>
+<% end %>
