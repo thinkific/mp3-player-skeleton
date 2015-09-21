@@ -7,4 +7,6 @@ end
 
 get '/api/v1/music' do
   #implement me
+  song = Song.first
+  json song
 end

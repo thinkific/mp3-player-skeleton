@@ -12,8 +12,11 @@ body {
 /* Container for the Audio player */
 .player {
   position: relative;
+  width: 400px;
   background: #ffffff;
   border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #666;
 }
 
 /* Show the album artwork, give it round corners */
@@ -26,6 +29,8 @@ body {
 .song__artwork {
   width: 100%;
   height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 /* Song time start, end and progress bar */
@@ -43,6 +48,8 @@ body {
   text-align: center;
   font-size: 12px;
   color: #ffffff;
+  float: left;
+  width: 25%;
 }
 
 .song__time-progress-container {

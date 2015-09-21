@@ -24,6 +24,13 @@
 
     this.controlButton.on("click", function(e) {
       e.preventDefault();
+
+      if(self.isPlaying) {
+        self.stop();
+      } else {
+        self.play();
+      }
+      self.isPlaying = !self.isPlaying;
       //implement me
     });
 
@@ -37,6 +44,7 @@
 
   player.prototype.percentComplete = function(currentPlayTimeInSeconds) {
     //implement me
+    return ((currentPlayTimeInSeconds / this.duration) * 100) + '%';
   };
 
   player.prototype.updateProgress = function() {
@@ -49,10 +57,14 @@
 
   player.prototype.play = function() {
     //implement me
+    this.audioElement.play();
+    $(this.controlButton).removeClass('play-button').addClass('play-pause');
   };
 
   player.prototype.stop = function() {
     //implement me
+    this.audioElement.pause();
+    $(this.controlButton).removeClass('play-pause').addClass('play-button');
   };
 
   player.prototype.formatDuration = function(seconds) {
