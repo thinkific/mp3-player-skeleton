@@ -25,6 +25,7 @@
     this.controlButton.on("click", function(e) {
       e.preventDefault();
       //implement me
+      self.isPlaying ? self.stop() : self.play();
     });
 
     self.stop();
@@ -32,11 +33,14 @@
 
   player.prototype.initialize = function(song) {
     this.jQueryElement.attr("src", song.url);
+    this.controlButton.addClass('play-button');
     this.audioElement.load();
   };
 
   player.prototype.percentComplete = function(currentPlayTimeInSeconds) {
     //implement me
+    var percentage = (currentPlayTimeInSeconds / this.duration) * 100;
+    return percentage + "%";
   };
 
   player.prototype.updateProgress = function() {
@@ -49,10 +53,18 @@
 
   player.prototype.play = function() {
     //implement me
+    this.controlButton.removeClass('play-button');
+    this.controlButton.addClass('play-pause');
+    this.audioElement.play();
+    this.isPlaying = true;
   };
 
   player.prototype.stop = function() {
     //implement me
+    this.controlButton.removeClass('play-pause');
+    this.controlButton.addClass('play-button');
+    this.audioElement.pause();
+    this.isPlaying = false;
   };
 
   player.prototype.formatDuration = function(seconds) {
