@@ -25,3 +25,6 @@ All assets needed to complete this challenge are included in this repository. If
 2. `bundle exec rake db:migrate db:seed`
 3. `shotgun -p 3000 -o 0.0.0.0`
 4. Visit `http://localhost:3000/` in your browser
+
+## See a live version of this app:
+https://guarded-basin-44864.herokuapp.com/ 
