@@ -10,7 +10,7 @@ All assets needed to complete this challenge are included in this repository. If
 
 ## Specs:
 
-1. The MP3 player should look something like: 
+1. The MP3 player should look something like:
 
 ![alt tag] (https://s3.amazonaws.com/thinkific/default_images/mp3_player_final_look.png)
 
@@ -27,4 +27,4 @@ All assets needed to complete this challenge are included in this repository. If
 4. Visit `http://localhost:3000/` in your browser
 
 ## See a live version of this app:
-https://guarded-basin-44864.herokuapp.com/ 
+https://thinkific-frontend-challenge.herokuapp.com/ 
