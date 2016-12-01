@@ -27,4 +27,4 @@ All assets needed to complete this challenge are included in this repository. If
 4. Visit `http://localhost:3000/` in your browser
 
 ## See a live version of this app:
-https://thinkific-frontend-challenge.herokuapp.com/ 
+http://thinkific-frontend-challenge.herokuapp.com/ 
