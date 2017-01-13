@@ -6,5 +6,6 @@ get '/' do
 end
 
 get '/api/v1/music' do
-  #implement me
+  # id = 1 looks to be Three Little Birds
+  json Song.find(1) # or Song.first
 end

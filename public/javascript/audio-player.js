@@ -24,7 +24,14 @@
 
     this.controlButton.on("click", function(e) {
       e.preventDefault();
-      //implement me
+
+      if (self.isPlaying) {
+        self.stop();
+      } else {
+        self.play();
+      }
+
+      self.isPlaying = !self.isPlaying;
     });
 
     self.stop();
@@ -36,7 +43,7 @@
   };
 
   player.prototype.percentComplete = function(currentPlayTimeInSeconds) {
-    //implement me
+    return (currentPlayTimeInSeconds / this.duration * 100) + '%';
   };
 
   player.prototype.updateProgress = function() {
@@ -48,11 +55,13 @@
   };
 
   player.prototype.play = function() {
-    //implement me
+    this.controlButton[0].className = 'play-pause'; // Alternatively, we can use jQuery addClass / removeClass
+    this.audioElement.play();
   };
 
   player.prototype.stop = function() {
-    //implement me
+    this.controlButton[0].className = 'play-button';
+    this.audioElement.pause();
   };
 
   player.prototype.formatDuration = function(seconds) {
