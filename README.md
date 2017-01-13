@@ -8,6 +8,8 @@ Note that this challenge requires that you have a small amount of backend experi
 
 All assets needed to complete this challenge are included in this repository. If you find yourself looking elsewhere for assets, you're probably missing something.
 
+You can fork this repository and submit a pull request of your solution when you are ready.
+
 ## Specs:
 
 1. The MP3 player should look something like:
