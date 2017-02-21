@@ -1,12 +1,12 @@
-$(function () {
-  var audioPlayer = new AudioPlayer($(".player"));
+$(function() {
+    var audioPlayer = new AudioPlayer($(".player"));
 
-  var fetchSong = $.ajax({
-    url: "/api/v1/music",
-    dataType: "json"
-  });
+    var fetchSong = $.ajax({
+        url: "/api/v1/music",
+        dataType: "json"
+    });
 
-  fetchSong.done(function(song) {
-    audioPlayer.initialize(song);
-  });
+    fetchSong.done(function(songs) {
+        audioPlayer.initialize(songs);
+    });
 });
