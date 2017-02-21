@@ -6,5 +6,12 @@ get '/' do
 end
 
 get '/api/v1/music' do
-  #implement me
+  songs = Song.all.each do |song|
+    @songJson = {
+    "id" => song.id,
+    "title" => song.title,
+    "url" => song.url,
+    }
+  end
+  json songs
 end
