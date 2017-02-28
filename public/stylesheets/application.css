@@ -16,6 +16,7 @@ body {
   border-radius: 10px;
   max-width: 400px;
   margin: 0 auto;
+  box-shadow: 0 0 15px 5px #ddd;
 }
 
 /* Show the album artwork, give it round corners */
