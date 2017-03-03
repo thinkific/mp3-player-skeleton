@@ -26,11 +26,7 @@
     this.controlButton.on("click", function(e) {
       e.preventDefault();
       //implement me
-      if(self.isPlaying){
-        self.stop();
-      } else {
-        self.play();
-      }
+      self.isPlaying ? self.stop() : self.play();
     });
 
     self.stop();
@@ -43,7 +39,8 @@
 
   player.prototype.percentComplete = function(currentPlayTimeInSeconds) {
     //implement me
-    return Math.floor((currentPlayTimeInSeconds/this.duration)*100);
+    var durationInDecimal = currentPlayTimeInSeconds/this.duration;
+    return Math.floor(durationInDecimal * 100);
   };
 
   player.prototype.updateProgress = function() {
@@ -65,8 +62,8 @@
   player.prototype.stop = function() {
     //implement me
     this.isPlaying = false;
-    this.controlButton.addClass("play-button");
     this.controlButton.removeClass("play-pause");
+    this.controlButton.addClass("play-button");
     this.audioElement.pause();
   };
 
