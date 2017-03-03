@@ -33,7 +33,7 @@
   };
 
   player.prototype.initialize = function(song) {
-    this.jQueryElement.attr("src", song[0].url);
+    this.jQueryElement.attr("src", song.url);
     this.audioElement.load();
   };
 

@@ -7,6 +7,6 @@ end
 
 get '/api/v1/music' do
   #implement me
-  @music = Song.all
+  @music = Song.find(1)
   @music.to_json
 end
