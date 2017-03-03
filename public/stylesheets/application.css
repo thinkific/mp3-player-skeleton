@@ -14,12 +14,16 @@ body {
   position: relative;
   background: #ffffff;
   border-radius: 10px;
+  width:400px;
+  margin: 0 auto;
 }
 
 /* Show the album artwork, give it round corners */
 .song__artwork-container {
   height: 250px;
   overflow: hidden;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 /* Make sure the album cover fits inside the container */
