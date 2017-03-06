@@ -1,12 +1,10 @@
 $(function () {
   var audioPlayer = new AudioPlayer($(".player"));
-
-  var fetchSong = $.ajax({
+  var fetchSongs = $.ajax({
     url: "/api/v1/music",
     dataType: "json"
   });
-
-  fetchSong.done(function(song) {
-    audioPlayer.initialize(song);
+  fetchSongs.done(function(songs) {
+    audioPlayer.initialize(songs);
   });
 });
