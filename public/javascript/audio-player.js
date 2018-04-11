@@ -25,6 +25,7 @@
     this.controlButton.on("click", function(e) {
       e.preventDefault();
       //implement me
+      self.play();
     });
 
     self.stop();
@@ -49,11 +50,12 @@
   };
 
   player.prototype.play = function() {
-    //implement me
+    this.audioElement.play();
   };
 
   player.prototype.stop = function() {
     //implement me
+    console.log('stop');
   };
 
   player.prototype.formatDuration = function(seconds) {
