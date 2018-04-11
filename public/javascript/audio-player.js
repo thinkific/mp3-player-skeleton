@@ -24,8 +24,11 @@
 
     this.controlButton.on("click", function(e) {
       e.preventDefault();
-      //implement me
-      self.play();
+      if (!self.audioElement.paused) {
+        self.stop();
+      } else {
+        self.play();
+      }
     });
 
     self.stop();
@@ -54,8 +57,8 @@
   };
 
   player.prototype.stop = function() {
-    //implement me
-    console.log('stop');
+    //using pause instead of stop here
+    this.audioElement.pause();
   };
 
   player.prototype.formatDuration = function(seconds) {
