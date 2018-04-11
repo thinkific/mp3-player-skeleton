@@ -24,10 +24,12 @@
 
     this.controlButton.on("click", function(e) {
       e.preventDefault();
-      if (!self.audioElement.paused) {
-        self.stop();
-      } else {
+      if (self.audioElement.paused) {
+        this.className = 'play-pause';
         self.play();
+      } else {
+        this.className = 'play-button';
+        self.stop();
       }
     });
 
