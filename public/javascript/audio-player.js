@@ -25,6 +25,7 @@
     this.controlButton.on("click", function(e) {
       e.preventDefault();
       if (self.audioElement.paused) {
+        // TODO: put classname change in play function
         this.className = 'play-pause';
         self.play();
       } else {
