@@ -36,7 +36,8 @@
   };
 
   player.prototype.percentComplete = function(currentPlayTimeInSeconds) {
-    //implement me
+    var totalPlayTimeInSeconds = this.audioElement.duration
+    return (currentPlayTimeInSeconds/totalPlayTimeInSeconds)*100 +"%";
   };
 
   player.prototype.updateProgress = function() {

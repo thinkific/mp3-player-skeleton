@@ -6,5 +6,6 @@ get '/' do
 end
 
 get '/api/v1/music' do
-  Song.all.to_json
+  #just grabbing The Little Birds for now
+  Song.first.to_json
 end
