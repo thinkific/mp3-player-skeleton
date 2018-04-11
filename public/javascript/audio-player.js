@@ -25,11 +25,8 @@
     this.controlButton.on("click", function(e) {
       e.preventDefault();
       if (self.audioElement.paused) {
-        // TODO: put classname change in play function
-        this.className = 'play-pause';
         self.play();
       } else {
-        this.className = 'play-button';
         self.stop();
       }
     });
@@ -57,11 +54,13 @@
 
   player.prototype.play = function() {
     this.audioElement.play();
+    this.controlButton.addClass('play-pause').removeClass('play-button');
   };
 
   player.prototype.stop = function() {
-    //using pause instead of stop here
+    // using pause instead of stop here
     this.audioElement.pause();
+    this.controlButton.removeClass('play-pause').addClass('play-button');
   };
 
   player.prototype.formatDuration = function(seconds) {
