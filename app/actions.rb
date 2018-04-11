@@ -6,5 +6,5 @@ get '/' do
 end
 
 get '/api/v1/music' do
-  #implement me
+  Song.all.to_json
 end
