@@ -16,6 +16,9 @@ body {
   border-radius: 10px;
   width: 400px;
   margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(219,219,219,1);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(219,219,219,1);
+  box-shadow: 0px 0px 20px 2px rgba(219,219,219,1);
 }
 
 /* Show the album artwork, give it round corners */
