@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   var audioPlayer = new AudioPlayer($(".player"));
 
   var fetchSong = $.ajax({

@@ -12,14 +12,20 @@ body {
 /* Container for the Audio player */
 .player {
   position: relative;
+  margin: 0 auto;
+  max-width: 400px;
   background: #ffffff;
   border-radius: 10px;
+  -webkit-box-shadow: 0in 0px 1.25pc 0.020833333in rgba(219,219,219,1);
+  -moz-box-shadow: 0in 0px 1.25pc 0.020833333in rgba(219,219,219,1);
+  box-shadow: 0in 0px 1.25pc 0.020833333in rgba(219,219,219,1);
 }
 
 /* Show the album artwork, give it round corners */
 .song__artwork-container {
   height: 250px;
   overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
 }
 
 /* Make sure the album cover fits inside the container */
@@ -31,6 +37,8 @@ body {
 /* Song time start, end and progress bar */
 .song__time {
   position: absolute;
+  display: flex;
+  justify-content: center;
   top: 206px;
   width: 100%;
   overflow: hidden;
@@ -40,6 +48,7 @@ body {
 
 .song__time-start,
 .song__time-end {
+  flex: 1 auto;
   text-align: center;
   font-size: 12px;
   color: #ffffff;
@@ -88,22 +97,36 @@ body {
 
 /* Container for the player controls. Only Play and Pause right now* */
 .player-controls {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 5px 0 20px;
 }
 
-.play-button {
-  display: block;
-  background: url("/images/btn-play.png") no-repeat;
+.play-button,
+.play-pause {
   width: 37px;
   height: 44px;
-  margin: 0 auto;
+}
+
+.play-button {
+  background: url("/images/btn-play.png") no-repeat;
 }
 
 .play-pause {
-  display: block;
   background: url("/images/btn-pause.png") no-repeat;
+}
+
+.play-prev,
+.play-next  {
   width: 37px;
-  height: 44px;
-  margin: 0 auto;
+  height: 22px;
+}
+
+.play-prev {
+  background: url("/images/btn-rewind.png") no-repeat;
+}
+
+.play-next {
+  background: url("/images/btn-fastforward.png") no-repeat;
 }
