@@ -65,7 +65,7 @@
 
   player.prototype.formatDuration = function(seconds) {
     var total = m.duration(seconds, "seconds");
-    return m.utc(total.asMilliseconds()).format("hh:mm:ss");
+    return m.utc(total.asMilliseconds()).format("HH:mm:ss");
   };
 
   w.AudioPlayer = player;
