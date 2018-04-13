@@ -1,4 +1,4 @@
-class CreateSongs < ActiveRecord::Migration
+class CreateSongs < ActiveRecord::Migration[5.2]
   def up
     create_table :songs do |t|
       t.string :url
